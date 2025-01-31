@@ -1,0 +1,2046 @@
+attention_head_size: 8
+categorical_groups: {}
+causal_attention: true
+dataset_parameters:
+  add_encoder_length: true
+  add_relative_time_idx: true
+  add_target_scales: true
+  allow_missing_timesteps: false
+  categorical_encoders:
+    __group_id__currency_type: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_:
+        BTC: 0
+        ETH: 1
+        SOL: 2
+        XRP: 3
+      classes_vector_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - &id001 !!python/name:numpy.ndarray ''
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 4
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U3
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 12
+          - 4
+          - 8
+        - false
+        - !!binary |
+          QgAAAFQAAABDAAAARQAAAFQAAABIAAAAUwAAAE8AAABMAAAAWAAAAFIAAABQAAAA
+      warn: true
+    currency_type: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_:
+        BTC: 0
+        ETH: 1
+        SOL: 2
+        XRP: 3
+      classes_vector_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 4
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U3
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 12
+          - 4
+          - 8
+        - false
+        - !!binary |
+          QgAAAFQAAABDAAAARQAAAFQAAABIAAAAUwAAAE8AAABMAAAAWAAAAFIAAABQAAAA
+      warn: true
+    day_of_week: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_:
+        '0': 0
+        '1': 1
+        '2': 2
+        '3': 3
+        '4': 4
+        '5': 5
+        '6': 6
+      classes_vector_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 7
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U1
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 4
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MAAAADEAAAAyAAAAMwAAADQAAAA1AAAANgAAAA==
+      warn: true
+    day_of_year: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_:
+        '1': 0
+        '10': 1
+        '100': 2
+        '101': 3
+        '102': 4
+        '103': 5
+        '104': 6
+        '105': 7
+        '106': 8
+        '107': 9
+        '108': 10
+        '109': 11
+        '11': 12
+        '110': 13
+        '111': 14
+        '112': 15
+        '113': 16
+        '114': 17
+        '115': 18
+        '116': 19
+        '117': 20
+        '118': 21
+        '119': 22
+        '12': 23
+        '120': 24
+        '121': 25
+        '122': 26
+        '123': 27
+        '124': 28
+        '125': 29
+        '126': 30
+        '127': 31
+        '128': 32
+        '129': 33
+        '13': 34
+        '130': 35
+        '131': 36
+        '132': 37
+        '133': 38
+        '134': 39
+        '135': 40
+        '136': 41
+        '137': 42
+        '138': 43
+        '139': 44
+        '14': 45
+        '140': 46
+        '141': 47
+        '142': 48
+        '143': 49
+        '144': 50
+        '145': 51
+        '146': 52
+        '147': 53
+        '148': 54
+        '149': 55
+        '15': 56
+        '150': 57
+        '151': 58
+        '152': 59
+        '153': 60
+        '154': 61
+        '155': 62
+        '156': 63
+        '157': 64
+        '158': 65
+        '159': 66
+        '16': 67
+        '160': 68
+        '161': 69
+        '162': 70
+        '163': 71
+        '164': 72
+        '165': 73
+        '166': 74
+        '167': 75
+        '168': 76
+        '169': 77
+        '17': 78
+        '170': 79
+        '171': 80
+        '172': 81
+        '173': 82
+        '174': 83
+        '175': 84
+        '176': 85
+        '177': 86
+        '178': 87
+        '179': 88
+        '18': 89
+        '180': 90
+        '181': 91
+        '182': 92
+        '183': 93
+        '184': 94
+        '185': 95
+        '186': 96
+        '187': 97
+        '188': 98
+        '189': 99
+        '19': 100
+        '190': 101
+        '191': 102
+        '192': 103
+        '193': 104
+        '194': 105
+        '195': 106
+        '196': 107
+        '197': 108
+        '198': 109
+        '199': 110
+        '2': 111
+        '20': 112
+        '200': 113
+        '201': 114
+        '202': 115
+        '203': 116
+        '204': 117
+        '205': 118
+        '206': 119
+        '207': 120
+        '208': 121
+        '209': 122
+        '21': 123
+        '210': 124
+        '211': 125
+        '212': 126
+        '213': 127
+        '214': 128
+        '215': 129
+        '216': 130
+        '217': 131
+        '218': 132
+        '219': 133
+        '22': 134
+        '220': 135
+        '221': 136
+        '222': 137
+        '223': 138
+        '224': 139
+        '225': 140
+        '226': 141
+        '227': 142
+        '228': 143
+        '229': 144
+        '23': 145
+        '230': 146
+        '231': 147
+        '232': 148
+        '233': 149
+        '234': 150
+        '235': 151
+        '236': 152
+        '237': 153
+        '238': 154
+        '239': 155
+        '24': 156
+        '240': 157
+        '241': 158
+        '242': 159
+        '243': 160
+        '244': 161
+        '245': 162
+        '246': 163
+        '247': 164
+        '248': 165
+        '249': 166
+        '25': 167
+        '250': 168
+        '251': 169
+        '252': 170
+        '253': 171
+        '254': 172
+        '255': 173
+        '256': 174
+        '257': 175
+        '258': 176
+        '259': 177
+        '26': 178
+        '260': 179
+        '261': 180
+        '262': 181
+        '263': 182
+        '264': 183
+        '265': 184
+        '266': 185
+        '267': 186
+        '268': 187
+        '269': 188
+        '27': 189
+        '270': 190
+        '271': 191
+        '272': 192
+        '273': 193
+        '274': 194
+        '275': 195
+        '276': 196
+        '277': 197
+        '278': 198
+        '279': 199
+        '28': 200
+        '280': 201
+        '281': 202
+        '282': 203
+        '283': 204
+        '284': 205
+        '285': 206
+        '286': 207
+        '287': 208
+        '288': 209
+        '289': 210
+        '29': 211
+        '290': 212
+        '291': 213
+        '292': 214
+        '293': 215
+        '294': 216
+        '295': 217
+        '296': 218
+        '297': 219
+        '298': 220
+        '299': 221
+        '3': 222
+        '30': 223
+        '300': 224
+        '301': 225
+        '302': 226
+        '303': 227
+        '304': 228
+        '305': 229
+        '306': 230
+        '307': 231
+        '308': 232
+        '309': 233
+        '31': 234
+        '310': 235
+        '311': 236
+        '312': 237
+        '313': 238
+        '314': 239
+        '315': 240
+        '316': 241
+        '317': 242
+        '318': 243
+        '319': 244
+        '32': 245
+        '320': 246
+        '321': 247
+        '322': 248
+        '323': 249
+        '324': 250
+        '325': 251
+        '326': 252
+        '327': 253
+        '328': 254
+        '329': 255
+        '33': 256
+        '330': 257
+        '331': 258
+        '332': 259
+        '333': 260
+        '334': 261
+        '335': 262
+        '336': 263
+        '337': 264
+        '338': 265
+        '339': 266
+        '34': 267
+        '340': 268
+        '341': 269
+        '342': 270
+        '343': 271
+        '344': 272
+        '345': 273
+        '346': 274
+        '347': 275
+        '348': 276
+        '349': 277
+        '35': 278
+        '350': 279
+        '351': 280
+        '352': 281
+        '353': 282
+        '354': 283
+        '355': 284
+        '356': 285
+        '357': 286
+        '358': 287
+        '359': 288
+        '36': 289
+        '360': 290
+        '361': 291
+        '362': 292
+        '363': 293
+        '364': 294
+        '365': 295
+        '366': 296
+        '37': 297
+        '38': 298
+        '39': 299
+        '4': 300
+        '40': 301
+        '41': 302
+        '42': 303
+        '43': 304
+        '44': 305
+        '45': 306
+        '46': 307
+        '47': 308
+        '48': 309
+        '49': 310
+        '5': 311
+        '50': 312
+        '51': 313
+        '52': 314
+        '53': 315
+        '54': 316
+        '55': 317
+        '56': 318
+        '57': 319
+        '58': 320
+        '59': 321
+        '6': 322
+        '60': 323
+        '61': 324
+        '62': 325
+        '63': 326
+        '64': 327
+        '65': 328
+        '66': 329
+        '67': 330
+        '68': 331
+        '69': 332
+        '7': 333
+        '70': 334
+        '71': 335
+        '72': 336
+        '73': 337
+        '74': 338
+        '75': 339
+        '76': 340
+        '77': 341
+        '78': 342
+        '79': 343
+        '8': 344
+        '80': 345
+        '81': 346
+        '82': 347
+        '83': 348
+        '84': 349
+        '85': 350
+        '86': 351
+        '87': 352
+        '88': 353
+        '89': 354
+        '9': 355
+        '90': 356
+        '91': 357
+        '92': 358
+        '93': 359
+        '94': 360
+        '95': 361
+        '96': 362
+        '97': 363
+        '98': 364
+        '99': 365
+      classes_vector_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 366
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U3
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 12
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAAAAAAAAAAAAAMQAAADAAAAAAAAAAMQAAADAAAAAwAAAAMQAAADAAAAAxAAAAMQAAADAAAAAy
+          AAAAMQAAADAAAAAzAAAAMQAAADAAAAA0AAAAMQAAADAAAAA1AAAAMQAAADAAAAA2AAAAMQAAADAA
+          AAA3AAAAMQAAADAAAAA4AAAAMQAAADAAAAA5AAAAMQAAADEAAAAAAAAAMQAAADEAAAAwAAAAMQAA
+          ADEAAAAxAAAAMQAAADEAAAAyAAAAMQAAADEAAAAzAAAAMQAAADEAAAA0AAAAMQAAADEAAAA1AAAA
+          MQAAADEAAAA2AAAAMQAAADEAAAA3AAAAMQAAADEAAAA4AAAAMQAAADEAAAA5AAAAMQAAADIAAAAA
+          AAAAMQAAADIAAAAwAAAAMQAAADIAAAAxAAAAMQAAADIAAAAyAAAAMQAAADIAAAAzAAAAMQAAADIA
+          AAA0AAAAMQAAADIAAAA1AAAAMQAAADIAAAA2AAAAMQAAADIAAAA3AAAAMQAAADIAAAA4AAAAMQAA
+          ADIAAAA5AAAAMQAAADMAAAAAAAAAMQAAADMAAAAwAAAAMQAAADMAAAAxAAAAMQAAADMAAAAyAAAA
+          MQAAADMAAAAzAAAAMQAAADMAAAA0AAAAMQAAADMAAAA1AAAAMQAAADMAAAA2AAAAMQAAADMAAAA3
+          AAAAMQAAADMAAAA4AAAAMQAAADMAAAA5AAAAMQAAADQAAAAAAAAAMQAAADQAAAAwAAAAMQAAADQA
+          AAAxAAAAMQAAADQAAAAyAAAAMQAAADQAAAAzAAAAMQAAADQAAAA0AAAAMQAAADQAAAA1AAAAMQAA
+          ADQAAAA2AAAAMQAAADQAAAA3AAAAMQAAADQAAAA4AAAAMQAAADQAAAA5AAAAMQAAADUAAAAAAAAA
+          MQAAADUAAAAwAAAAMQAAADUAAAAxAAAAMQAAADUAAAAyAAAAMQAAADUAAAAzAAAAMQAAADUAAAA0
+          AAAAMQAAADUAAAA1AAAAMQAAADUAAAA2AAAAMQAAADUAAAA3AAAAMQAAADUAAAA4AAAAMQAAADUA
+          AAA5AAAAMQAAADYAAAAAAAAAMQAAADYAAAAwAAAAMQAAADYAAAAxAAAAMQAAADYAAAAyAAAAMQAA
+          ADYAAAAzAAAAMQAAADYAAAA0AAAAMQAAADYAAAA1AAAAMQAAADYAAAA2AAAAMQAAADYAAAA3AAAA
+          MQAAADYAAAA4AAAAMQAAADYAAAA5AAAAMQAAADcAAAAAAAAAMQAAADcAAAAwAAAAMQAAADcAAAAx
+          AAAAMQAAADcAAAAyAAAAMQAAADcAAAAzAAAAMQAAADcAAAA0AAAAMQAAADcAAAA1AAAAMQAAADcA
+          AAA2AAAAMQAAADcAAAA3AAAAMQAAADcAAAA4AAAAMQAAADcAAAA5AAAAMQAAADgAAAAAAAAAMQAA
+          ADgAAAAwAAAAMQAAADgAAAAxAAAAMQAAADgAAAAyAAAAMQAAADgAAAAzAAAAMQAAADgAAAA0AAAA
+          MQAAADgAAAA1AAAAMQAAADgAAAA2AAAAMQAAADgAAAA3AAAAMQAAADgAAAA4AAAAMQAAADgAAAA5
+          AAAAMQAAADkAAAAAAAAAMQAAADkAAAAwAAAAMQAAADkAAAAxAAAAMQAAADkAAAAyAAAAMQAAADkA
+          AAAzAAAAMQAAADkAAAA0AAAAMQAAADkAAAA1AAAAMQAAADkAAAA2AAAAMQAAADkAAAA3AAAAMQAA
+          ADkAAAA4AAAAMQAAADkAAAA5AAAAMgAAAAAAAAAAAAAAMgAAADAAAAAAAAAAMgAAADAAAAAwAAAA
+          MgAAADAAAAAxAAAAMgAAADAAAAAyAAAAMgAAADAAAAAzAAAAMgAAADAAAAA0AAAAMgAAADAAAAA1
+          AAAAMgAAADAAAAA2AAAAMgAAADAAAAA3AAAAMgAAADAAAAA4AAAAMgAAADAAAAA5AAAAMgAAADEA
+          AAAAAAAAMgAAADEAAAAwAAAAMgAAADEAAAAxAAAAMgAAADEAAAAyAAAAMgAAADEAAAAzAAAAMgAA
+          ADEAAAA0AAAAMgAAADEAAAA1AAAAMgAAADEAAAA2AAAAMgAAADEAAAA3AAAAMgAAADEAAAA4AAAA
+          MgAAADEAAAA5AAAAMgAAADIAAAAAAAAAMgAAADIAAAAwAAAAMgAAADIAAAAxAAAAMgAAADIAAAAy
+          AAAAMgAAADIAAAAzAAAAMgAAADIAAAA0AAAAMgAAADIAAAA1AAAAMgAAADIAAAA2AAAAMgAAADIA
+          AAA3AAAAMgAAADIAAAA4AAAAMgAAADIAAAA5AAAAMgAAADMAAAAAAAAAMgAAADMAAAAwAAAAMgAA
+          ADMAAAAxAAAAMgAAADMAAAAyAAAAMgAAADMAAAAzAAAAMgAAADMAAAA0AAAAMgAAADMAAAA1AAAA
+          MgAAADMAAAA2AAAAMgAAADMAAAA3AAAAMgAAADMAAAA4AAAAMgAAADMAAAA5AAAAMgAAADQAAAAA
+          AAAAMgAAADQAAAAwAAAAMgAAADQAAAAxAAAAMgAAADQAAAAyAAAAMgAAADQAAAAzAAAAMgAAADQA
+          AAA0AAAAMgAAADQAAAA1AAAAMgAAADQAAAA2AAAAMgAAADQAAAA3AAAAMgAAADQAAAA4AAAAMgAA
+          ADQAAAA5AAAAMgAAADUAAAAAAAAAMgAAADUAAAAwAAAAMgAAADUAAAAxAAAAMgAAADUAAAAyAAAA
+          MgAAADUAAAAzAAAAMgAAADUAAAA0AAAAMgAAADUAAAA1AAAAMgAAADUAAAA2AAAAMgAAADUAAAA3
+          AAAAMgAAADUAAAA4AAAAMgAAADUAAAA5AAAAMgAAADYAAAAAAAAAMgAAADYAAAAwAAAAMgAAADYA
+          AAAxAAAAMgAAADYAAAAyAAAAMgAAADYAAAAzAAAAMgAAADYAAAA0AAAAMgAAADYAAAA1AAAAMgAA
+          ADYAAAA2AAAAMgAAADYAAAA3AAAAMgAAADYAAAA4AAAAMgAAADYAAAA5AAAAMgAAADcAAAAAAAAA
+          MgAAADcAAAAwAAAAMgAAADcAAAAxAAAAMgAAADcAAAAyAAAAMgAAADcAAAAzAAAAMgAAADcAAAA0
+          AAAAMgAAADcAAAA1AAAAMgAAADcAAAA2AAAAMgAAADcAAAA3AAAAMgAAADcAAAA4AAAAMgAAADcA
+          AAA5AAAAMgAAADgAAAAAAAAAMgAAADgAAAAwAAAAMgAAADgAAAAxAAAAMgAAADgAAAAyAAAAMgAA
+          ADgAAAAzAAAAMgAAADgAAAA0AAAAMgAAADgAAAA1AAAAMgAAADgAAAA2AAAAMgAAADgAAAA3AAAA
+          MgAAADgAAAA4AAAAMgAAADgAAAA5AAAAMgAAADkAAAAAAAAAMgAAADkAAAAwAAAAMgAAADkAAAAx
+          AAAAMgAAADkAAAAyAAAAMgAAADkAAAAzAAAAMgAAADkAAAA0AAAAMgAAADkAAAA1AAAAMgAAADkA
+          AAA2AAAAMgAAADkAAAA3AAAAMgAAADkAAAA4AAAAMgAAADkAAAA5AAAAMwAAAAAAAAAAAAAAMwAA
+          ADAAAAAAAAAAMwAAADAAAAAwAAAAMwAAADAAAAAxAAAAMwAAADAAAAAyAAAAMwAAADAAAAAzAAAA
+          MwAAADAAAAA0AAAAMwAAADAAAAA1AAAAMwAAADAAAAA2AAAAMwAAADAAAAA3AAAAMwAAADAAAAA4
+          AAAAMwAAADAAAAA5AAAAMwAAADEAAAAAAAAAMwAAADEAAAAwAAAAMwAAADEAAAAxAAAAMwAAADEA
+          AAAyAAAAMwAAADEAAAAzAAAAMwAAADEAAAA0AAAAMwAAADEAAAA1AAAAMwAAADEAAAA2AAAAMwAA
+          ADEAAAA3AAAAMwAAADEAAAA4AAAAMwAAADEAAAA5AAAAMwAAADIAAAAAAAAAMwAAADIAAAAwAAAA
+          MwAAADIAAAAxAAAAMwAAADIAAAAyAAAAMwAAADIAAAAzAAAAMwAAADIAAAA0AAAAMwAAADIAAAA1
+          AAAAMwAAADIAAAA2AAAAMwAAADIAAAA3AAAAMwAAADIAAAA4AAAAMwAAADIAAAA5AAAAMwAAADMA
+          AAAAAAAAMwAAADMAAAAwAAAAMwAAADMAAAAxAAAAMwAAADMAAAAyAAAAMwAAADMAAAAzAAAAMwAA
+          ADMAAAA0AAAAMwAAADMAAAA1AAAAMwAAADMAAAA2AAAAMwAAADMAAAA3AAAAMwAAADMAAAA4AAAA
+          MwAAADMAAAA5AAAAMwAAADQAAAAAAAAAMwAAADQAAAAwAAAAMwAAADQAAAAxAAAAMwAAADQAAAAy
+          AAAAMwAAADQAAAAzAAAAMwAAADQAAAA0AAAAMwAAADQAAAA1AAAAMwAAADQAAAA2AAAAMwAAADQA
+          AAA3AAAAMwAAADQAAAA4AAAAMwAAADQAAAA5AAAAMwAAADUAAAAAAAAAMwAAADUAAAAwAAAAMwAA
+          ADUAAAAxAAAAMwAAADUAAAAyAAAAMwAAADUAAAAzAAAAMwAAADUAAAA0AAAAMwAAADUAAAA1AAAA
+          MwAAADUAAAA2AAAAMwAAADUAAAA3AAAAMwAAADUAAAA4AAAAMwAAADUAAAA5AAAAMwAAADYAAAAA
+          AAAAMwAAADYAAAAwAAAAMwAAADYAAAAxAAAAMwAAADYAAAAyAAAAMwAAADYAAAAzAAAAMwAAADYA
+          AAA0AAAAMwAAADYAAAA1AAAAMwAAADYAAAA2AAAAMwAAADcAAAAAAAAAMwAAADgAAAAAAAAAMwAA
+          ADkAAAAAAAAANAAAAAAAAAAAAAAANAAAADAAAAAAAAAANAAAADEAAAAAAAAANAAAADIAAAAAAAAA
+          NAAAADMAAAAAAAAANAAAADQAAAAAAAAANAAAADUAAAAAAAAANAAAADYAAAAAAAAANAAAADcAAAAA
+          AAAANAAAADgAAAAAAAAANAAAADkAAAAAAAAANQAAAAAAAAAAAAAANQAAADAAAAAAAAAANQAAADEA
+          AAAAAAAANQAAADIAAAAAAAAANQAAADMAAAAAAAAANQAAADQAAAAAAAAANQAAADUAAAAAAAAANQAA
+          ADYAAAAAAAAANQAAADcAAAAAAAAANQAAADgAAAAAAAAANQAAADkAAAAAAAAANgAAAAAAAAAAAAAA
+          NgAAADAAAAAAAAAANgAAADEAAAAAAAAANgAAADIAAAAAAAAANgAAADMAAAAAAAAANgAAADQAAAAA
+          AAAANgAAADUAAAAAAAAANgAAADYAAAAAAAAANgAAADcAAAAAAAAANgAAADgAAAAAAAAANgAAADkA
+          AAAAAAAANwAAAAAAAAAAAAAANwAAADAAAAAAAAAANwAAADEAAAAAAAAANwAAADIAAAAAAAAANwAA
+          ADMAAAAAAAAANwAAADQAAAAAAAAANwAAADUAAAAAAAAANwAAADYAAAAAAAAANwAAADcAAAAAAAAA
+          NwAAADgAAAAAAAAANwAAADkAAAAAAAAAOAAAAAAAAAAAAAAAOAAAADAAAAAAAAAAOAAAADEAAAAA
+          AAAAOAAAADIAAAAAAAAAOAAAADMAAAAAAAAAOAAAADQAAAAAAAAAOAAAADUAAAAAAAAAOAAAADYA
+          AAAAAAAAOAAAADcAAAAAAAAAOAAAADgAAAAAAAAAOAAAADkAAAAAAAAAOQAAAAAAAAAAAAAAOQAA
+          ADAAAAAAAAAAOQAAADEAAAAAAAAAOQAAADIAAAAAAAAAOQAAADMAAAAAAAAAOQAAADQAAAAAAAAA
+          OQAAADUAAAAAAAAAOQAAADYAAAAAAAAAOQAAADcAAAAAAAAAOQAAADgAAAAAAAAAOQAAADkAAAAA
+          AAAA
+      warn: true
+    month: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_:
+        '1': 0
+        '10': 1
+        '11': 2
+        '12': 3
+        '2': 4
+        '3': 5
+        '4': 6
+        '5': 7
+        '6': 8
+        '7': 9
+        '8': 10
+        '9': 11
+      classes_vector_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 12
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U2
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 8
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAAAAAAAAxAAAAMAAAADEAAAAxAAAAMQAAADIAAAAyAAAAAAAAADMAAAAAAAAANAAAAAAAAAA1
+          AAAAAAAAADYAAAAAAAAANwAAAAAAAAA4AAAAAAAAADkAAAAAAAAA
+      warn: true
+    quarter: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_:
+        '1': 0
+        '2': 1
+        '3': 2
+        '4': 3
+      classes_vector_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 4
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U1
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 4
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAADIAAAAzAAAANAAAAA==
+      warn: true
+  constant_fill_strategy: {}
+  group_ids:
+  - currency_type
+  lags: {}
+  max_encoder_length: 90
+  max_prediction_length: 7
+  min_encoder_length: 45
+  min_prediction_idx: 0
+  min_prediction_length: 1
+  predict_mode: false
+  randomize_length: null
+  scalers:
+    Dollar_Index: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - &id003 !!python/object/apply:numpy.dtype
+          args:
+          - O8
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - '|'
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 63
+        - false
+        - - Dollar_Index
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - &id002 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - false
+        - !!binary |
+          ipmzQ2YFWUA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - &id004 !!python/object/apply:numpy.dtype
+        args:
+        - i8
+        - false
+        - true
+        state: !!python/tuple
+        - 3
+        - <
+        - null
+        - null
+        - null
+        - -1
+        - -1
+        - 0
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          HMT7ljWVF0A=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          ZbFxxDRhQUA=
+      with_mean: true
+      with_std: true
+    Gold_Price: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - - Gold_Price
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          RaEkolusnkA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id004
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          h3p2HTZCcEA=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          lw0XOn6F8EA=
+      with_mean: true
+      with_std: true
+    Interest_Rate: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - - Interest_Rate
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          0179G5pTBEA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id004
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          j89vIpzhAkA=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          fbu3igxIFkA=
+      with_mean: true
+      with_std: true
+    US_10_Year: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - - US_10_Year
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          o15HX5InBkA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id004
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          Rb2fkXo59j8=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          lcxvjd/e/j8=
+      with_mean: true
+      with_std: true
+    VIX_Value: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - - VIX_Value
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          fdUZ5pykNEA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id004
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          lmFIZJh3GEA=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          oSasjiO1QkA=
+      with_mean: true
+      with_std: true
+    encoder_length: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - - encoder_length
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id004
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          AAAAAAAA8D8=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      with_mean: true
+      with_std: true
+    log_price: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - - log_price
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          I9wCYpeNFEA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id004
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          6TYtlnkZEUA=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          6Fax7kpGMkA=
+      with_mean: true
+      with_std: true
+    price_target_center: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - - price_target_center
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          L5RCXG6dw0A=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id004
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          jbuDUb2Vz0A=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          12FWfdssr0E=
+      with_mean: true
+      with_std: true
+    price_target_scale: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - - price_target_scale
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          S8bhJ3pNtUA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id004
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          a7tK9M0owUA=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          elY/tx1nkkE=
+      with_mean: true
+      with_std: true
+    relative_time_idx: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.4.2
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - - relative_time_idx
+      mean_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id004
+      - !!binary |
+        BBsAAAAAAAA=
+      scale_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          AAAAAAAA8D8=
+      var_: !!python/object/apply:numpy.core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id002
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      with_mean: true
+      with_std: true
+  static_categoricals:
+  - currency_type
+  static_reals:
+  - encoder_length
+  - price_target_center
+  - price_target_scale
+  target: price_target
+  target_normalizer: &id006 !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+    center: true
+    groups:
+    - currency_type
+    method: standard
+    method_kwargs: {}
+    missing_:
+      center: 1078.402414088924
+      scale: 580.5343476388039
+    norm_: !!python/object:pandas.core.frame.DataFrame
+      _flags:
+        allows_duplicate_labels: true
+      _metadata: []
+      _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+      - !!python/tuple
+        - !!python/object/apply:pandas._libs.internals._unpickle_block
+          - !!python/object/apply:numpy.core.multiarray._reconstruct
+            args:
+            - *id001
+            - !!python/tuple
+              - 0
+            - !!binary |
+              Yg==
+            state: !!python/tuple
+            - 1
+            - !!python/tuple
+              - 2
+              - 4
+            - !!python/object/apply:numpy.dtype
+              args:
+              - f8
+              - false
+              - true
+              state: !!python/tuple
+              - 3
+              - <
+              - null
+              - null
+              - null
+              - -1
+              - -1
+              - 0
+            - false
+            - !!binary |
+              wuCSKN+P4kD5L7zVRlCgQDGxhZanKlFAH+HTpO4a1b89kqfmByvUQKr05zK/E5FAGmNhUnIIUUD+
+              RrCp3O3mPw==
+          - !!python/object/apply:builtins.slice
+            - 0
+            - 2
+            - 1
+          - 2
+      - - !!python/object/apply:pandas.core.indexes.base._new_Index
+          - &id005 !!python/name:pandas.core.indexes.base.Index ''
+          - data: !!python/object/apply:numpy.core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+              - !!python/object/apply:numpy.dtype
+                args:
+                - O8
+                - false
+                - true
+                state: !!python/tuple
+                - 3
+                - '|'
+                - null
+                - null
+                - null
+                - -1
+                - -1
+                - 63
+              - false
+              - - center
+                - scale
+            name: null
+        - !!python/object/apply:pandas.core.indexes.base._new_Index
+          - *id005
+          - data: !!python/object/apply:numpy.core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 4
+              - !!python/object/apply:numpy.dtype
+                args:
+                - i4
+                - false
+                - true
+                state: !!python/tuple
+                - 3
+                - <
+                - null
+                - null
+                - null
+                - -1
+                - -1
+                - 0
+              - false
+              - !!binary |
+                AAAAAAEAAAACAAAAAwAAAA==
+            name: currency_type
+      _typ: dataframe
+      attrs: {}
+    scale_by_group: false
+    transformation: softplus
+  time_idx: time_idx
+  time_varying_known_categoricals:
+  - month
+  - day_of_week
+  - day_of_year
+  - quarter
+  time_varying_known_reals:
+  - Dollar_Index
+  - Gold_Price
+  - Interest_Rate
+  - US_10_Year
+  - VIX_Value
+  - relative_time_idx
+  time_varying_unknown_categoricals: []
+  time_varying_unknown_reals:
+  - price_target
+  - log_price
+  variable_groups: {}
+  weight: null
+dropout: 0.3
+embedding_labels:
+  currency_type:
+    BTC: 0
+    ETH: 1
+    SOL: 2
+    XRP: 3
+  day_of_week:
+    '0': 0
+    '1': 1
+    '2': 2
+    '3': 3
+    '4': 4
+    '5': 5
+    '6': 6
+  day_of_year:
+    '1': 0
+    '10': 1
+    '100': 2
+    '101': 3
+    '102': 4
+    '103': 5
+    '104': 6
+    '105': 7
+    '106': 8
+    '107': 9
+    '108': 10
+    '109': 11
+    '11': 12
+    '110': 13
+    '111': 14
+    '112': 15
+    '113': 16
+    '114': 17
+    '115': 18
+    '116': 19
+    '117': 20
+    '118': 21
+    '119': 22
+    '12': 23
+    '120': 24
+    '121': 25
+    '122': 26
+    '123': 27
+    '124': 28
+    '125': 29
+    '126': 30
+    '127': 31
+    '128': 32
+    '129': 33
+    '13': 34
+    '130': 35
+    '131': 36
+    '132': 37
+    '133': 38
+    '134': 39
+    '135': 40
+    '136': 41
+    '137': 42
+    '138': 43
+    '139': 44
+    '14': 45
+    '140': 46
+    '141': 47
+    '142': 48
+    '143': 49
+    '144': 50
+    '145': 51
+    '146': 52
+    '147': 53
+    '148': 54
+    '149': 55
+    '15': 56
+    '150': 57
+    '151': 58
+    '152': 59
+    '153': 60
+    '154': 61
+    '155': 62
+    '156': 63
+    '157': 64
+    '158': 65
+    '159': 66
+    '16': 67
+    '160': 68
+    '161': 69
+    '162': 70
+    '163': 71
+    '164': 72
+    '165': 73
+    '166': 74
+    '167': 75
+    '168': 76
+    '169': 77
+    '17': 78
+    '170': 79
+    '171': 80
+    '172': 81
+    '173': 82
+    '174': 83
+    '175': 84
+    '176': 85
+    '177': 86
+    '178': 87
+    '179': 88
+    '18': 89
+    '180': 90
+    '181': 91
+    '182': 92
+    '183': 93
+    '184': 94
+    '185': 95
+    '186': 96
+    '187': 97
+    '188': 98
+    '189': 99
+    '19': 100
+    '190': 101
+    '191': 102
+    '192': 103
+    '193': 104
+    '194': 105
+    '195': 106
+    '196': 107
+    '197': 108
+    '198': 109
+    '199': 110
+    '2': 111
+    '20': 112
+    '200': 113
+    '201': 114
+    '202': 115
+    '203': 116
+    '204': 117
+    '205': 118
+    '206': 119
+    '207': 120
+    '208': 121
+    '209': 122
+    '21': 123
+    '210': 124
+    '211': 125
+    '212': 126
+    '213': 127
+    '214': 128
+    '215': 129
+    '216': 130
+    '217': 131
+    '218': 132
+    '219': 133
+    '22': 134
+    '220': 135
+    '221': 136
+    '222': 137
+    '223': 138
+    '224': 139
+    '225': 140
+    '226': 141
+    '227': 142
+    '228': 143
+    '229': 144
+    '23': 145
+    '230': 146
+    '231': 147
+    '232': 148
+    '233': 149
+    '234': 150
+    '235': 151
+    '236': 152
+    '237': 153
+    '238': 154
+    '239': 155
+    '24': 156
+    '240': 157
+    '241': 158
+    '242': 159
+    '243': 160
+    '244': 161
+    '245': 162
+    '246': 163
+    '247': 164
+    '248': 165
+    '249': 166
+    '25': 167
+    '250': 168
+    '251': 169
+    '252': 170
+    '253': 171
+    '254': 172
+    '255': 173
+    '256': 174
+    '257': 175
+    '258': 176
+    '259': 177
+    '26': 178
+    '260': 179
+    '261': 180
+    '262': 181
+    '263': 182
+    '264': 183
+    '265': 184
+    '266': 185
+    '267': 186
+    '268': 187
+    '269': 188
+    '27': 189
+    '270': 190
+    '271': 191
+    '272': 192
+    '273': 193
+    '274': 194
+    '275': 195
+    '276': 196
+    '277': 197
+    '278': 198
+    '279': 199
+    '28': 200
+    '280': 201
+    '281': 202
+    '282': 203
+    '283': 204
+    '284': 205
+    '285': 206
+    '286': 207
+    '287': 208
+    '288': 209
+    '289': 210
+    '29': 211
+    '290': 212
+    '291': 213
+    '292': 214
+    '293': 215
+    '294': 216
+    '295': 217
+    '296': 218
+    '297': 219
+    '298': 220
+    '299': 221
+    '3': 222
+    '30': 223
+    '300': 224
+    '301': 225
+    '302': 226
+    '303': 227
+    '304': 228
+    '305': 229
+    '306': 230
+    '307': 231
+    '308': 232
+    '309': 233
+    '31': 234
+    '310': 235
+    '311': 236
+    '312': 237
+    '313': 238
+    '314': 239
+    '315': 240
+    '316': 241
+    '317': 242
+    '318': 243
+    '319': 244
+    '32': 245
+    '320': 246
+    '321': 247
+    '322': 248
+    '323': 249
+    '324': 250
+    '325': 251
+    '326': 252
+    '327': 253
+    '328': 254
+    '329': 255
+    '33': 256
+    '330': 257
+    '331': 258
+    '332': 259
+    '333': 260
+    '334': 261
+    '335': 262
+    '336': 263
+    '337': 264
+    '338': 265
+    '339': 266
+    '34': 267
+    '340': 268
+    '341': 269
+    '342': 270
+    '343': 271
+    '344': 272
+    '345': 273
+    '346': 274
+    '347': 275
+    '348': 276
+    '349': 277
+    '35': 278
+    '350': 279
+    '351': 280
+    '352': 281
+    '353': 282
+    '354': 283
+    '355': 284
+    '356': 285
+    '357': 286
+    '358': 287
+    '359': 288
+    '36': 289
+    '360': 290
+    '361': 291
+    '362': 292
+    '363': 293
+    '364': 294
+    '365': 295
+    '366': 296
+    '37': 297
+    '38': 298
+    '39': 299
+    '4': 300
+    '40': 301
+    '41': 302
+    '42': 303
+    '43': 304
+    '44': 305
+    '45': 306
+    '46': 307
+    '47': 308
+    '48': 309
+    '49': 310
+    '5': 311
+    '50': 312
+    '51': 313
+    '52': 314
+    '53': 315
+    '54': 316
+    '55': 317
+    '56': 318
+    '57': 319
+    '58': 320
+    '59': 321
+    '6': 322
+    '60': 323
+    '61': 324
+    '62': 325
+    '63': 326
+    '64': 327
+    '65': 328
+    '66': 329
+    '67': 330
+    '68': 331
+    '69': 332
+    '7': 333
+    '70': 334
+    '71': 335
+    '72': 336
+    '73': 337
+    '74': 338
+    '75': 339
+    '76': 340
+    '77': 341
+    '78': 342
+    '79': 343
+    '8': 344
+    '80': 345
+    '81': 346
+    '82': 347
+    '83': 348
+    '84': 349
+    '85': 350
+    '86': 351
+    '87': 352
+    '88': 353
+    '89': 354
+    '9': 355
+    '90': 356
+    '91': 357
+    '92': 358
+    '93': 359
+    '94': 360
+    '95': 361
+    '96': 362
+    '97': 363
+    '98': 364
+    '99': 365
+  month:
+    '1': 0
+    '10': 1
+    '11': 2
+    '12': 3
+    '2': 4
+    '3': 5
+    '4': 6
+    '5': 7
+    '6': 8
+    '7': 9
+    '8': 10
+    '9': 11
+  quarter:
+    '1': 0
+    '2': 1
+    '3': 2
+    '4': 3
+embedding_paddings: []
+embedding_sizes:
+  currency_type: !!python/tuple
+  - 4
+  - 3
+  day_of_week: !!python/tuple
+  - 7
+  - 5
+  day_of_year: !!python/tuple
+  - 366
+  - 44
+  month: !!python/tuple
+  - 12
+  - 6
+  quarter: !!python/tuple
+  - 4
+  - 3
+hidden_continuous_size: 8
+hidden_continuous_sizes: {}
+hidden_size: 64
+learning_rate: 0.007
+log_gradient_flow: false
+log_interval: 10
+log_val_interval: 10
+lstm_layers: 1
+max_encoder_length: 90
+monotone_constaints: {}
+optimizer: adam
+optimizer_params: null
+output_size: 7
+output_transformer: *id006
+reduce_on_plateau_min_lr: 1.0e-05
+reduce_on_plateau_patience: 4
+reduce_on_plateau_reduction: 2.0
+share_single_variable_networks: false
+static_categoricals:
+- currency_type
+static_reals:
+- encoder_length
+- price_target_center
+- price_target_scale
+time_varying_categoricals_decoder:
+- month
+- day_of_week
+- day_of_year
+- quarter
+time_varying_categoricals_encoder:
+- month
+- day_of_week
+- day_of_year
+- quarter
+time_varying_reals_decoder:
+- Dollar_Index
+- Gold_Price
+- Interest_Rate
+- US_10_Year
+- VIX_Value
+- relative_time_idx
+time_varying_reals_encoder:
+- Dollar_Index
+- Gold_Price
+- Interest_Rate
+- US_10_Year
+- VIX_Value
+- relative_time_idx
+- price_target
+- log_price
+weight_decay: 0.0
+x_categoricals:
+- currency_type
+- month
+- day_of_week
+- day_of_year
+- quarter
+x_reals:
+- encoder_length
+- price_target_center
+- price_target_scale
+- Dollar_Index
+- Gold_Price
+- Interest_Rate
+- US_10_Year
+- VIX_Value
+- relative_time_idx
+- price_target
+- log_price
