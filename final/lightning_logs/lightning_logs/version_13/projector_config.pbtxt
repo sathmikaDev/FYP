@@ -1,0 +1,25 @@
+embeddings {
+  tensor_name: "id:00516"
+  metadata_path: "00516/id\\metadata.tsv"
+  tensor_path: "00516/id\\tensors.tsv"
+}
+embeddings {
+  tensor_name: "month:00516"
+  metadata_path: "00516/month\\metadata.tsv"
+  tensor_path: "00516/month\\tensors.tsv"
+}
+embeddings {
+  tensor_name: "day_of_week:00516"
+  metadata_path: "00516/day_of_week\\metadata.tsv"
+  tensor_path: "00516/day_of_week\\tensors.tsv"
+}
+embeddings {
+  tensor_name: "day_of_year:00516"
+  metadata_path: "00516/day_of_year\\metadata.tsv"
+  tensor_path: "00516/day_of_year\\tensors.tsv"
+}
+embeddings {
+  tensor_name: "quarter:00516"
+  metadata_path: "00516/quarter\\metadata.tsv"
+  tensor_path: "00516/quarter\\tensors.tsv"
+}
