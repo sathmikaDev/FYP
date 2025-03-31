@@ -1,0 +1,48 @@
+# Virtual environments
+venv/
+.VENV/
+.venv/
+ExoDeep_Predict/server/venv/
+**/venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Logs and outputs
+*.log
+*.out
+*.err
+*.pth
+*.ckpt
+*.h5
+*.pt
+
+# Dataset and model outputs
+# datasets/
+# Datasetsv2/
+# ExoDeep_Predict/dataset/
+lightning_logs/
+# Final_Thesis/datasets/
+Final_Thesis/notebooks/__pycache__/
+Final_Thesis/notebooks/*.csv
+Final_Thesis/notebooks/*.parquet
+Final_Thesis/notebooks/*.feather
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment and configuration files
+.env
+.env.*
+
+# Others
+*.ipynb~  # temporary or unsaved notebook versions

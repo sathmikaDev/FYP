@@ -1,0 +1,11 @@
+Flask
+pandas
+numpy
+torch
+pytorch-forecasting
+scikit-learn
+matplotlib
+pytorch-lightning
+pydantic
+tqdm
+typing-extensions
