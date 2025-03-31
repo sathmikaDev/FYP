@@ -21,9 +21,11 @@ __pycache__/
 *.out
 *.err
 *.pth
-*.ckpt
+
 *.h5
 *.pt
+
+Final_Thesis/notebooks/optuna_test/
 
 # Dataset and model outputs
 # datasets/
